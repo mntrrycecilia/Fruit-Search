@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+   box-sizing: border-box; 
+}
+
+:focus {
+ border: 2px;
+}
+
+body {
+  background: linear-gradient(to right, lightyellow, yellow, orange, red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  
+}
+
+.search-container {
+ position: fixed; /* keep container fixed on the screen */
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%); /* adjust for exact centering */
+ width: 300px;
+
+}
+
+.search-container .suggestions {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  width: calc(100% -2px); /* adjust width if there is a border */
+  border: 1px solid transparent; /* match the input border */
+}
+
+.search-container .suggestions ul {
+  list-style-type: none; /* Removes the bullets */
+  padding: 0; /* Removes default padding(left side) */
+  margin: 0; /* Removes default margin */
+  
+}
+
+.search-container input {
+  width: 100%;
+  border: 1px solid #ccc; /* Border for the input */
+  border-radius: 20px;
+  padding: 10px;
+  background: linear-gradient(to left, red, orange, yellow);
+}
+
+.search-container .suggestions {
+  position: absolute;
+  background: linear-gradient(to left, red, orange, yellow);
+}
+
+.search-container .suggestions ul li {
+  padding: 5px 10 px;
+  cursor: pointer; /* Changes cursor to pointer */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.search-container .suggestions ul li:hover {
+  background-color: orange; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+.search-container input:focus {
+  outline: 2px solid orange; /* When click on container change color to orange */
+}
